@@ -7,11 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import kr.anima.xd.s.myapp2.CloudFragment;
+import kr.anima.xd.s.myapp2.DashboardFragment;
+import kr.anima.xd.s.myapp2.InventoryFragment;
 import kr.anima.xd.s.myapp2.R;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -19,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                case R.id.menu_cloud:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.FL_Container, new CloudFragment()).commit();
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.menu_dashboard:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.FL_Container, new DashboardFragment()).commit();
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.menu_inventory:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.FL_Container, new InventoryFragment()).commit();
                     return true;
             }
             return false;
@@ -38,10 +39,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mTextMessage = (TextView) findViewById(R.id.message);
+        
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.menu_dashboard);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
 }

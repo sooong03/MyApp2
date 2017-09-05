@@ -5,4 +5,19 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black_overlay">#66000000</color>
+
+
+
+    <color name="myColorGreyPrimary">#455A64</color>
+    <color name="myColorGreyPrimaryDark">#263238</color>
+    <color name="myColorGreyAccent">#F06292</color>
+    <color name="myColorGreyText">#212121</color>
+    <color name="myColorGreyWhite">#FFFFFF</color>
+    <color name="myColorGreyBase">#90A4AE</color>
+    <color name="myColorGreyLightGrey">#c2c2c2</color>
+
+
+    <color name="topic_divider">#CACACA</color>
+    <color name="memo_icon_tint">#718698</color>
+
 </resources>
