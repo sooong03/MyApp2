@@ -1,4 +1,4 @@
-package kr.anima.xd.s.myapp2;
+package kr.anima.xd.s.myapp2.dashboard;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,11 +8,11 @@ import android.view.ViewGroup;
  * Created by alfo6-10 on 9/5/2017.
  */
 
-public class DashboardItemListAdapter extends RecyclerView.Adapter {
+public class TimelineItemListAdapter extends RecyclerView.Adapter {
 
 
 
-    public DashboardItemListAdapter() {
+    public TimelineItemListAdapter() {
     }
 
     @Override

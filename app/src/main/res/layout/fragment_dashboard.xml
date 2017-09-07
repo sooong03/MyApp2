@@ -2,28 +2,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.anima.xd.s.myapp2.DashboardFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="kr.anima.xd.s.myapp2.dashboard.DashboardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_16dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <org.honorato.multistatetogglebutton.MultiStateToggleButton
+                android:id="@+id/MSTB_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_8dp"
+                app:values="@array/array_dashboard"
+                app:mstbColorNotPressedBackground="@color/myColorGreyWhite"
+                app:mstbColorNotPressedText="@color/myColorGreyText"
+                app:mstbColorPressedBackground="@color/myColorGreyWhite"
+                app:mstbColorPressedText="@color/myColorGreyAccent">
+
+            </org.honorato.multistatetogglebutton.MultiStateToggleButton>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/VP_Dash_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v4.view.ViewPager>
 
     </LinearLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/VP_Dash_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </android.support.v4.view.ViewPager>
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/FAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fabSize="mini"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/_16dp"

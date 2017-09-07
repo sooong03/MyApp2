@@ -1,8 +1,10 @@
-package kr.anima.xd.s.myapp2;
+package kr.anima.xd.s.myapp2.dashboard;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import static kr.anima.xd.s.myapp2.items.NameOfItem.*;
 
 /**
  * Created by alfo6-10 on 9/5/2017.
@@ -15,9 +17,9 @@ public class DashboardPagerAdapter extends FragmentStatePagerAdapter {
 
     public DashboardPagerAdapter(FragmentManager fm) {
         super(fm);
-        pages[0]=new DashboardListFragment();
-        pages[1]=new CalendarFragment();
-        pages[2]=new TrackerFragment();
+        pages[PAGE_TIMELINE]=new TimelineFragment();
+        pages[PAGE_CALENDAR]=new CalendarFragment();
+        pages[PAGE_TRACKER]=new TrackerFragment();
     }
 
     @Override
@@ -29,4 +31,7 @@ public class DashboardPagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return NUM_PAGE;
     }
+
+
+
 }

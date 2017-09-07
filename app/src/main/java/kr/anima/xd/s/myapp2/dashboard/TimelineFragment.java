@@ -1,9 +1,9 @@
-package kr.anima.xd.s.myapp2;
+package kr.anima.xd.s.myapp2.dashboard;
 
 
 import android.icu.text.DateFormat;
-import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
@@ -16,11 +16,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import kr.anima.xd.s.myapp2.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashboardListFragment extends Fragment implements View.OnClickListener{
+public class TimelineFragment extends Fragment implements View.OnClickListener{
 
     AppBarLayout appBarLayout;
     Toolbar toolbar;
@@ -30,7 +32,7 @@ public class DashboardListFragment extends Fragment implements View.OnClickListe
 
 
 
-    public DashboardListFragment() {
+    public TimelineFragment() {
         // load today data
     }
 
@@ -38,10 +40,10 @@ public class DashboardListFragment extends Fragment implements View.OnClickListe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_dashboard_list, container, false);
+        View view=inflater.inflate(R.layout.fragment_timeline, container, false);
 
         toolbar=view.findViewById(R.id.Tb_Dashboard);
-        getActivity().setActionBar(toolbar);
+
 
         TV_Month=view.findViewById(R.id.TV_Month);
         TV_Date=view.findViewById(R.id.TV_Date);
@@ -55,7 +57,7 @@ public class DashboardListFragment extends Fragment implements View.OnClickListe
 
         recyclerView=view.findViewById(R.id.RV_Dashboard_List);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL));
-        recyclerView.setAdapter(new DashboardItemListAdapter());
+        recyclerView.setAdapter(new TimelineItemListAdapter());
 
         return view;
     }

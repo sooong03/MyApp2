@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="kr.anima.xd.s.myapp2.DashboardListFragment">
+    tools:context="kr.anima.xd.s.myapp2.dashboard.TimelineFragment">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/Tb_Dashboard"

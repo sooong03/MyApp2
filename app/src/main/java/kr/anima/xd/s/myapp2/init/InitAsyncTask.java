@@ -16,7 +16,7 @@ public class InitAsyncTask extends AsyncTask <Void, String, Boolean> {
     @Override
     protected Boolean doInBackground(Void... voids) {
         // password ?
-        return null;
+        return true;
     }
 
 

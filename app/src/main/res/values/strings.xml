@@ -5,6 +5,10 @@
     <string name="menu_dashboard">대시보드</string>
     <string name="menu_inventory">인벤토리</string>
 
+    <string name="menu_dashboard_timeline">타임라인</string>
+    <string name="menu_dashboard_calendar">캘린더</string>
+    <string name="menu_dashboard_tracker">트래커</string>
+
     <string name="title_activity_init">InitActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
