@@ -111,6 +111,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener,
 //        FabTest fabTest=new FabTest(mContext, m, btn);
 
         // TODO :: FAB Setting
+        // 아이콘은 픽셀이미지로 사용
 //         1. xml
         // - menu size, color
         // - btn title, icon
