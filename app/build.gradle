@@ -40,4 +40,7 @@ dependencies {
     // calendar
     compile 'com.kelin.calendarlistview:library:1.0.1'
 
+    // floating action button
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+
 }

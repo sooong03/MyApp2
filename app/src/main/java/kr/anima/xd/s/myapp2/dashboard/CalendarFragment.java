@@ -47,17 +47,17 @@ public class CalendarFragment extends Fragment {
 //        calendarItemAdapter = new CalendarItemAdapter(this);
 //
 //        calendarListView.setCalendarListViewAdapter(calendarItemAdapter, listItemAdapter);
-
-        BaseCalendarItemAdapter itemAdapter=new BaseCalendarItemAdapter(mContext);
-        BaseCalendarListAdapter listAdapter=new BaseCalendarListAdapter(mContext) {
-            @Override
-            public View getItemView(Object model, String month, int pos, View convertView, ViewGroup parent) {
-                return null;
-            }
-        };
-
-        CV_Calendar=view.findViewById(R.id.CV_calendar);
-        CV_Calendar.setCalendarListViewAdapter(itemAdapter, listAdapter);
+//
+//        BaseCalendarItemAdapter itemAdapter=new BaseCalendarItemAdapter(mContext);
+//        BaseCalendarListAdapter listAdapter=new BaseCalendarListAdapter(mContext) {
+//            @Override
+//            public View getItemView(Object model, String month, int pos, View convertView, ViewGroup parent) {
+//                return null;
+//            }
+//        };
+//
+//        CV_Calendar=view.findViewById(R.id.CV_calendar);
+//        CV_Calendar.setCalendarListViewAdapter(itemAdapter, listAdapter);
 //        CL_Calendar=view.findViewById(R.id.CL_Calendar);
 //        CoordinatorLayout.Behavior behavior=CL_Calendar.generateLayoutParams(null).getBehavior();
 

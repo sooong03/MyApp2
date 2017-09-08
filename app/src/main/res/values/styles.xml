@@ -27,5 +27,10 @@
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
+    
+    <style name="labelStyle">
+        <item name="android:textColor">@color/myColorGreyText</item>
+        <item name="android:textSize">@dimen/typo_caption_sub</item>
+    </style>
 
 </resources>
