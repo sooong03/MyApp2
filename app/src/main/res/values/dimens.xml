@@ -12,6 +12,7 @@
     <dimen name="size_36dp">36dp</dimen>
     <dimen name="size_48dp">48dp</dimen>
     <dimen name="size_56dp">56dp</dimen>
+    <dimen name="size_100dp">100dp</dimen>
 
     <!--Typographic-->
     <dimen name="typo_password">32sp</dimen>

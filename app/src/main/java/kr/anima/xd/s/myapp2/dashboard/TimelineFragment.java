@@ -2,7 +2,7 @@ package kr.anima.xd.s.myapp2.dashboard;
 
 
 import android.icu.text.DateFormat;
-import android.icu.util.Calendar;
+import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -16,6 +16,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 import kr.anima.xd.s.myapp2.R;
 
 
@@ -24,16 +27,17 @@ import kr.anima.xd.s.myapp2.R;
  */
 public class TimelineFragment extends Fragment implements View.OnClickListener{
 
-    AppBarLayout appBarLayout;
-    Toolbar toolbar;
     TextView TV_Month, TV_Date;
     ImageView IV_Prev, IV_Next;
     RecyclerView recyclerView;
+
+    private Calendar calendar;
 
 
 
     public TimelineFragment() {
         // load today data
+        initCurrentDate();
     }
 
 
@@ -42,13 +46,20 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_timeline, container, false);
 
-        toolbar=view.findViewById(R.id.Tb_Dashboard);
-
-
         TV_Month=view.findViewById(R.id.TV_Month);
         TV_Date=view.findViewById(R.id.TV_Date);
         IV_Prev=view.findViewById(R.id.IV_Arrow_Prev);
         IV_Next=view.findViewById(R.id.IV_Arrow_Next);
+
+
+        TV_Month.setText(String.format(Locale.UK, "%tB", calendar));
+        TV_Date.setText(String.format("%te", calendar));
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            TV_Month.setText(new SimpleDateFormat("MMM").format(calendar.getTime()));
+            TV_Date.setText(new SimpleDateFormat("dd").format(calendar.getTime()));
+        }
+
 
         TV_Month.setOnClickListener(this);
         TV_Date.setOnClickListener(this);
@@ -63,13 +74,8 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
     }
 
      private void initCurrentDate(){
-         // date
-         Calendar calendar=Calendar.getInstance();
+         calendar= Calendar.getInstance();
          calendar.setTimeInMillis(System.currentTimeMillis());
-
-         TV_Month.setText(String.format(DateFormat.MONTH, calendar.get(Calendar.MONTH-1)));
-//         TV_Date.setText(String.format(DateFormat.DATE_FIELD, calendar.get(Calendar.DATE))+"");
-
      }
 
     private void loadDataByDate(){
@@ -89,6 +95,7 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.IV_Arrow_Prev:
                 // 어제 날짜
+
                 break;
             case R.id.IV_Arrow_Next:
                 // 내일날짜

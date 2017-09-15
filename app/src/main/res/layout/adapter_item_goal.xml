@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_56dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="@dimen/_4dp"
+    app:cardElevation="@dimen/_4dp"
+    app:cardCornerRadius="@dimen/_4dp"
+    android:layout_marginBottom="@dimen/_4dp"
+    android:layout_marginLeft="@dimen/_4dp"
+    android:layout_marginRight="@dimen/_4dp"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/_8dp"
+        android:paddingLeft="@dimen/_16dp">
+        <TextView
+            android:id="@+id/TV_Title_Goal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="@dimen/typo_body"
+            android:textColor="@color/myColorGreyText"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/TV_numOfProgress"
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/myColorGreyText"
+            android:textSize="@dimen/typo_headline"
+            android:textStyle="bold"
+            android:alpha=".8"
+            android:layout_toLeftOf="@+id/TV_"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_8dp"/>
+
+        <TextView
+            android:id="@+id/TV_"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="/"
+            android:textSize="@dimen/typo_title"
+            android:layout_toLeftOf="@+id/TV_numOfTotal"/>
+
+        <TextView
+            android:id="@+id/TV_numOfTotal"
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/myColorGreyText"
+            android:textStyle="bold"
+            android:alpha=".5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_4dp"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

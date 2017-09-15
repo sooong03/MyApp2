@@ -2,11 +2,7 @@ package kr.anima.xd.s.myapp2.dashboard;
 
 
 import android.content.Context;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.OvalShape;
-import android.os.Build;
 import android.os.Bundle;
 //import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -23,9 +19,6 @@ import org.honorato.multistatetogglebutton.MultiStateToggleButton;
 import org.honorato.multistatetogglebutton.ToggleButton;
 
 import kr.anima.xd.s.myapp2.R;
-import kr.anima.xd.s.myapp2.items.FabTest;
-import kr.anima.xd.s.myapp2.items.MyFloatingActionMenu;
-import kr.anima.xd.s.myapp2.main.MainActivity;
 
 import static kr.anima.xd.s.myapp2.items.NameOfItem.*;
 
@@ -72,7 +65,6 @@ public class DashboardFragment extends Fragment implements View.OnClickListener,
 //        fab=view.findViewById(R.id.FAB);
 //        fab.setOnClickListener(this);
         test(view);
-
 
 
 

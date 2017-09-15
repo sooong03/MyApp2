@@ -6,35 +6,10 @@
     android:orientation="vertical"
     tools:context="kr.anima.xd.s.myapp2.dashboard.CalendarFragment">
 
-    <com.kelin.calendarlistview.library.CalendarListView
-        android:id="@+id/CV_calendar"
+    <CalendarView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content">
 
-    </com.kelin.calendarlistview.library.CalendarListView>
-
-    <!--<CalendarView-->
-        <!--android:id="@+id/CV_calendar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="@dimen/_8dp">-->
-
-    <!--</CalendarView>-->
-
-
-    <!--<android.support.design.widget.CoordinatorLayout-->
-        <!--android:id="@+id/CL_Calendar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<android.support.v7.widget.RecyclerView-->
-            <!--android:id="@+id/RV_Calendar_list"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
-
-        <!--</android.support.v7.widget.RecyclerView>-->
-
-    <!--</android.support.design.widget.CoordinatorLayout>-->
+    </CalendarView>
 
 </LinearLayout>

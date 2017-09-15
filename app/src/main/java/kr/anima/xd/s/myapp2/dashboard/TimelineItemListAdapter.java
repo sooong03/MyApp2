@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 public class TimelineItemListAdapter extends RecyclerView.Adapter {
 
-
+    final int NUM_ITEM=5;
 
     public TimelineItemListAdapter() {
     }
