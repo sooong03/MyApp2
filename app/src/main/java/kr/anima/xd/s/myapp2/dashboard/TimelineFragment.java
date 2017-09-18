@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.vipulasri.timelineview.TimelineView;
+
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -30,7 +32,7 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
     TextView TV_Month, TV_Date;
     ImageView IV_Prev, IV_Next;
     RecyclerView recyclerView;
-
+    TimelineView TLV_Timeline;
     private Calendar calendar;
 
 
@@ -66,6 +68,9 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
         TV_Date.setOnClickListener(this);
         IV_Prev.setOnClickListener(this);
         IV_Next.setOnClickListener(this);
+
+        TLV_Timeline=view.findViewById(R.id.TLV_Timeline);
+
 
         recyclerView=view.findViewById(R.id.RV_Timeline_Schedule);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL));

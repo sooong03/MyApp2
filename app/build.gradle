@@ -45,4 +45,5 @@ dependencies {
     //    compile 'com.github.thepacific:adapter:2.0.4'
     // timeline
     compile 'com.github.vipulasri:timelineview:1.0.5'
+//    compile project(':timelineview')
 }
