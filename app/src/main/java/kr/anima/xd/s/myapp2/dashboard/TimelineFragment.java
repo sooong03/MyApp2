@@ -38,6 +38,7 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
     public TimelineFragment() {
         // load today data
         initCurrentDate();
+        initEntries();
     }
 
 
@@ -66,7 +67,7 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
         IV_Prev.setOnClickListener(this);
         IV_Next.setOnClickListener(this);
 
-        recyclerView=view.findViewById(R.id.RV_Dashboard_List);
+        recyclerView=view.findViewById(R.id.RV_Timeline_Schedule);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL));
         recyclerView.setAdapter(new TimelineItemListAdapter());
 
@@ -78,13 +79,17 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
          calendar.setTimeInMillis(System.currentTimeMillis());
      }
 
-    private void loadDataByDate(){
-        // load data
-        // schedule : date, time, objective, purpose, elements,
-        // task
-        // info : date, weather
-        //
-    }
+     private void initEntries(){
+         // TODO : DB data load
+         // 오늘의 상태
+         // 노트
+         // 날씨
+         // 오늘 시간별 일정
+         // 오늘 체크할 일정
+         // 어제 체크하지 못한 일
+         // 내일 할일
+     }
+
 
     @Override
     public void onClick(View view) {
@@ -95,7 +100,6 @@ public class TimelineFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.IV_Arrow_Prev:
                 // 어제 날짜
-
                 break;
             case R.id.IV_Arrow_Next:
                 // 내일날짜

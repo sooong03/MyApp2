@@ -6,17 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="kr.anima.xd.s.myapp2.dashboard.TimelineFragment">
 
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/Tb_Dashboard"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
-
-        <!---->
-    <!--</android.support.v7.widget.Toolbar>-->
-
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_48dp"
+        android:layout_height="@dimen/size_56dp"
         android:layout_marginBottom="@dimen/_4dp"
         android:paddingRight="@dimen/_16dp">
         <TextView
@@ -69,12 +61,13 @@
         <!--TODO : behavior 적용대상 수정 -->
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/RV_Dashboard_List"
+            android:id="@+id/RV_Timeline_Schedule"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         </android.support.v7.widget.RecyclerView>
+
 
     </android.support.design.widget.CoordinatorLayout>
 

@@ -33,14 +33,16 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:cardview-v7:26.0.0-alpha1'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
-
     // multi-state toggle button
     compile 'org.honorato.multistatetogglebutton:multistatetogglebutton:0.2.2'
-
     // calendar
     compile 'com.kelin.calendarlistview:library:1.0.1'
-
     // floating action button
     compile 'com.getbase:floatingactionbutton:1.10.1'
-
+    // viewpager indicator
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    // adapter
+    //    compile 'com.github.thepacific:adapter:2.0.4'
+    // timeline
+    compile 'com.github.vipulasri:timelineview:1.0.5'
 }

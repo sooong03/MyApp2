@@ -3,12 +3,15 @@ package kr.anima.xd.s.myapp2.dashboard;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.github.vipulasri.timelineview.TimelineView;
 
 /**
  * Created by alfo6-10 on 9/5/2017.
  */
 
-public class TimelineItemListAdapter extends RecyclerView.Adapter {
+public class TimelineItemListAdapter extends RecyclerView.Adapter<TimelineItemListAdapter.TimelineViewHolder> {
 
     final int NUM_ITEM=5;
 
@@ -16,12 +19,12 @@ public class TimelineItemListAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public TimelineViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(TimelineViewHolder holder, int position) {
 
     }
 
@@ -31,8 +34,11 @@ public class TimelineItemListAdapter extends RecyclerView.Adapter {
     }
 
 
-    class ViewHolder extends RecyclerView.ViewHolder{
-        public ViewHolder(View itemView) {
+    class TimelineViewHolder extends RecyclerView.ViewHolder{
+        TextView mDate;
+        TextView mMessage;
+        TimelineView mTimelineView;
+        public TimelineViewHolder(View itemView) {
             super(itemView);
         }
     }

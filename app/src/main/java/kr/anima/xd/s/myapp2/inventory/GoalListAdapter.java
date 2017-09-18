@@ -17,8 +17,13 @@ import kr.anima.xd.s.myapp2.R;
 public class GoalListAdapter extends RecyclerView.Adapter<GoalListAdapter.ViewHolder> {
 
     // TODO : Goal 리스트 받아오기
+    private ArrayList<String> aa;
 
     public GoalListAdapter() {
+    }
+
+    public GoalListAdapter(ArrayList<String> aa){
+        this.aa=aa;
     }
 
     @Override
@@ -35,7 +40,7 @@ public class GoalListAdapter extends RecyclerView.Adapter<GoalListAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return aa.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
